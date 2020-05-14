@@ -1,0 +1,45 @@
+adult group distribution 							class num 2, gender index 9, race index 8
+						
+new_adult_data2.csv								male	female
+defaultdict(<type 'int'>, {0: 30668, 1: 14554})					0	1
+						
+adult_race-2group-white.csv							white	others
+defaultdict(<type 'int'>, {0: 38903, 1: 6319})					0	1
+						
+						
+White, Asian-Pac-Islander, Amer-Indian-Eskimo, Other, Black.			
+
+
+	broward group distribution 					class num 2, gender index 1, race index 0	
+					
+broward_reverse.csv				
+defaultdict(<type 'int'>, {0: 9711, 1: 1985})
+					
+broward_reverse.csv							black	others
+defaultdict(<type 'int'>, {0: 3726, 1: 7970})				0	1
+
+black	white	hisp						
+
+
+compas group distribution 					class num 2, gender index 1, race index 2
+				
+compas_reverse.csv
+defaultdict(<type 'int'>, {0: 17450, 1: 6934})			0	1
+				
+compas_reverse.csv						black	others
+defaultdict(<type 'int'>, {0: 11028, 1: 13356})			0	1
+
+black	white	hisp		
+
+
+
+hospital group distribution 					class num 4, gender index 2, race index 10
+				
+				
+hpmore20_alldata2.csv						male	female
+defaultdict(<type 'int'>, {0: 33319, 1: 76912})			0	1
+				
+hospital_race-2group-white.csv					white	others
+defaultdict(<type 'int'>, {0: 56664, 1: 53567})			0	1
+				
+black	white	hisp		
