@@ -51,12 +51,11 @@ if __name__=='__main__':
 
 		X,S,y=get_data(fname,sen_indices=indices)
 
-		enc=OneHotEncoder(drop='if_binary')
-		# enc.fit(X)
-		X=enc.fit_transform(X).toarray()
-		S=enc.fit_transform(S).toarray()
-		Y=np.array(y).reshape(-1,1)
-		Y=enc.fit_transform(Y).toarray().astype(int)
+		# enc=OneHotEncoder(drop='if_binary')
+		# X=enc.fit_transform(X).toarray()
+		# S=enc.fit_transform(S).toarray()
+		# Y=np.array(y).reshape(-1,1)
+		# Y=enc.fit_transform(Y).toarray().astype(int)
 
 		#BEGIN: reweighing for race
 		stat={}
@@ -102,4 +101,4 @@ if __name__=='__main__':
 			reweigh_gender.append(weight[(int(S[i][1]),y[i])])
 		#END: reweighing for gender
 
-		np.savez('./npz/'+fname.split('.')[0]+'.npz',X=X,S=S,y=y,reweigh_race=reweigh_race,reweigh_gender=reweigh_gender)
+		np.savez('./npz/'+fname.split('.')[0]+'.npz',X=X,S=S,y=y)

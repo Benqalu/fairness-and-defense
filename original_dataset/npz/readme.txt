@@ -1,12 +1,22 @@
 1、总共有四个数据集：adult, broward, compas, hospital
 
-2、每个数据集的都有两个sensitive attribute：race 和 gender
+2、每个数据集的都有两个sensitive attribute：race 和 gender 均为binary。
 
-3、由于race并非binary，所以每个数据集在生成时race划分为某个特定的group（例如白人）和其他，并转换为binary。划分可由数据名字看出，例如adult_race-white.npz，意思为adult数据集，race被划分为white和other。
-
-4、每个数据集有5个内容，key分别是['X','Y','S','reweigh_race','reweigh_gender']
+4、每个数据集有5个内容，key分别是['X','Y','S']
 	(1) X是non-sensitive attribute的feature matrix
 	(2) Y是label，是一个2D-array，其中除了hospital之外皆为binary（shape=(?,1)），hosptial的label有4中，故shape=(?,4).
-	(2) S是sensitive attribute，固定有两列，第一列固定是race，第二列是gender
+	(2) S是sensitive attribute，固定有两列，第一列固定是race，第二列是gender，S要与X作为一个整体成为target model的input
 	(3) 所有数据均已做one-hot处理
-	(4) reweigh_race 和 reweigh_gender 是使用 fairness 算法调整之后每一个训练数据的weight，和X,Y,S的size一样，用来给classifier train的时候设定权值，例如sklearn 的 RandomForestClassifer，训练时使用fit(X,y,sample_weight=reweigh_race).
+
+5、请求的输出格式：考虑到实验结果图的要求，请输出：
+	(1) X：target model input的原始数据；
+	(2) S：target model input的sensitive attribute
+	(3) y：target model 的 true label
+	(4) y_pred：target model在 X上预测的结果，是probability（如果是>=2 classes，那么就是softmax的结果，下同）
+	(5) y_pred_defense：target model在有defense 的情况下X上预测的结果，是probability
+	(5) l：MIA 的 label，表示数据是属于training (1) 还是 testing (0)
+	(6) l_pred：MIA在(4)上的预测结果（有defense），是probability
+	(7) l_pred_defense：MIA在(5)上的预测结果（无defense）
+	(8) 以上数据(1)-(7)需要一一对应
+
+6、如果defense 算法本身有调节参数，请条件参数从no defense 到最强defense的至少6个参数结果。如果是这种情况，因为已经包含了no defense 参数的结果，故5中的(4)和(6)可以省略。
