@@ -1,0 +1,243 @@
+dataset: location
+epochs: 200
+result folder: ../result/location/code_publish/
+network architecture: ./model/fccnet_location.py
+x_train shape: (10000, 183)
+10000 train samples
+10000 test samples
+y_train shape: (10000,)
+Model: "model_1"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         (None, 183)               0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 1024)              188416    
+_________________________________________________________________
+dense_2 (Dense)              (None, 512)               524800    
+_________________________________________________________________
+dense_3 (Dense)              (None, 256)               131328    
+_________________________________________________________________
+dense_4 (Dense)              (None, 128)               32896     
+_________________________________________________________________
+dense_5 (Dense)              (None, 2)                 258       
+_________________________________________________________________
+activation_1 (Activation)    (None, 2)                 0         
+=================================================================
+Total params: 877,698
+Trainable params: 877,698
+Non-trainable params: 0
+_________________________________________________________________
+Epochs: 99
+Test loss: 0.43820645449161527
+Test accuracy: 0.8334000110626221
+Train loss: 0.10939343595504761
+Train accuracy: 0.9617999792098999
+Learning rate: 0.0010000000474974513
+Epochs: 199
+Test loss: 0.688193462061882
+Test accuracy: 0.8259000182151794
+Train loss: 0.040479383696988225
+Train accuracy: 0.980400025844574
+Model: "model_2"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_2 (InputLayer)         (None, 2)                 0         
+_________________________________________________________________
+dense_6 (Dense)              (None, 256)               768       
+_________________________________________________________________
+dense_7 (Dense)              (None, 128)               32896     
+_________________________________________________________________
+dense_8 (Dense)              (None, 64)                8256      
+_________________________________________________________________
+dense_9 (Dense)              (None, 1)                 65        
+_________________________________________________________________
+activation_2 (Activation)    (None, 1)                 0         
+=================================================================
+Total params: 41,985
+Trainable params: 41,985
+Non-trainable params: 0
+_________________________________________________________________
+Epochs: 99
+Train loss: 0.687777396774292
+Train accuracy: 0.5584499835968018
+Epochs: 199
+Train loss: 0.6840214721679687
+Train accuracy: 0.5588499903678894
+Epochs: 299
+Train loss: 0.6816607674598694
+Train accuracy: 0.5596500039100647
+Epochs: 399
+Train loss: 0.6804412779808044
+Train accuracy: 0.559149980545044
+Config: 
+dataset: location
+result folder: ../result/location/code_publish/
+network architecture: ./model/fccnet_location.py
+Loading Evaluation dataset...
+Attacker evaluate member data range: {'start': '0', 'end': '10000'}
+Attacker evaluate nonmember data range: {'start': '20000', 'end': '30000'}
+Loading target model...
+f evaluate shape: (20000, 2)
+f evaluate logits shape: (20000, 2)
+Loading defense model...
+evaluate loss on model: 0.6794909156799317
+evaluate accuracy on model: 0.5633500218391418
+test sample size : 20000
+test sample id: 0
+test sample id: 100
+max iteration reached with id: 134, max score: 0.5063862549852458, prediction_score: [[0.28719693]], c3: 0.1, not add noise
+test sample id: 200
+max iteration reached with id: 211, max score: 0.5440471900221161, prediction_score: [[0.28818926]], c3: 0.1, not add noise
+max iteration reached with id: 252, max score: 0.5394806672448283, prediction_score: [[0.288083]], c3: 0.1, not add noise
+test sample id: 300
+max iteration reached with id: 373, max score: 0.5130214018796008, prediction_score: [[0.2874191]], c3: 0.1, not add noise
+max iteration reached with id: 377, max score: 0.5968960752049414, prediction_score: [[0.28939852]], c3: 0.1, not add noise
+test sample id: 400
+max iteration reached with id: 424, max score: 0.5627214837590143, prediction_score: [[0.2886181]], c3: 0.1, not add noise
+max iteration reached with id: 426, max score: 0.5579987889033399, prediction_score: [[0.28850698]], c3: 0.1, not add noise
+max iteration reached with id: 442, max score: 0.5058357971156668, prediction_score: [[0.28717232]], c3: 0.1, not add noise
+max iteration reached with id: 471, max score: 0.5388958296600579, prediction_score: [[0.28806937]], c3: 0.1, not add noise
+test sample id: 500
+max iteration reached with id: 520, max score: 0.5911199587372574, prediction_score: [[0.2892675]], c3: 0.1, not add noise
+max iteration reached with id: 551, max score: 0.5725603995945541, prediction_score: [[0.2888491]], c3: 0.1, not add noise
+max iteration reached with id: 595, max score: 0.5362466300331885, prediction_score: [[0.28800774]], c3: 0.1, not add noise
+failed sample for label not same for id: 598,c3:0.1 not add noise
+test sample id: 600
+max iteration reached with id: 603, max score: 0.5462592307429294, prediction_score: [[0.28823945]], c3: 0.1, not add noise
+max iteration reached with id: 626, max score: 0.5500521375651813, prediction_score: [[0.28832486]], c3: 0.1, not add noise
+max iteration reached with id: 630, max score: 0.5862368425085451, prediction_score: [[0.28915694]], c3: 0.1, not add noise
+failed sample for label not same for id: 637,c3:0.1 not add noise
+max iteration reached with id: 641, max score: 0.5968960752049414, prediction_score: [[0.28939852]], c3: 0.1, not add noise
+test sample id: 700
+max iteration reached with id: 752, max score: 0.5241531331478861, prediction_score: [[0.28772426]], c3: 0.1, not add noise
+test sample id: 800
+max iteration reached with id: 815, max score: 0.5989952876083194, prediction_score: [[0.28944632]], c3: 0.1, not add noise
+max iteration reached with id: 823, max score: 0.5615028936239721, prediction_score: [[0.28858942]], c3: 0.1, not add noise
+max iteration reached with id: 836, max score: 0.5462592307429294, prediction_score: [[0.28823945]], c3: 0.1, not add noise
+max iteration reached with id: 853, max score: 0.634516895701767, prediction_score: [[0.2905252]], c3: 0.1, not add noise
+max iteration reached with id: 859, max score: 0.5445322313942867, prediction_score: [[0.28820047]], c3: 0.1, not add noise
+test sample id: 900
+failed sample for label not same for id: 979,c3:0.1 not add noise
+test sample id: 1000
+max iteration reached with id: 1013, max score: 0.5996975739945757, prediction_score: [[0.28946224]], c3: 0.1, not add noise
+max iteration reached with id: 1030, max score: 0.5416133877015344, prediction_score: [[0.2881326]], c3: 0.1, not add noise
+test sample id: 1100
+max iteration reached with id: 1116, max score: 0.5362466300331885, prediction_score: [[0.28800774]], c3: 0.1, not add noise
+failed sample for label not same for id: 1130,c3:0.1 not add noise
+max iteration reached with id: 1132, max score: 0.5818053439066043, prediction_score: [[0.28905663]], c3: 0.1, not add noise
+failed sample for label not same for id: 1199,c3:0.1 not add noise
+test sample id: 1200
+test sample id: 1300
+max iteration reached with id: 1312, max score: 0.5461640131211722, prediction_score: [[0.2882373]], c3: 0.1, not add noise
+failed sample for label not same for id: 1319,c3:0.1 not add noise
+failed sample for label not same for id: 1342,c3:0.1 not add noise
+test sample id: 1400
+max iteration reached with id: 1423, max score: 0.6051860372849625, prediction_score: [[0.28959066]], c3: 0.1, not add noise
+test sample id: 1500
+max iteration reached with id: 1530, max score: 0.5989952876083194, prediction_score: [[0.28944632]], c3: 0.1, not add noise
+max iteration reached with id: 1546, max score: 0.5996975739945757, prediction_score: [[0.28946224]], c3: 0.1, not add noise
+test sample id: 1600
+max iteration reached with id: 1679, max score: 0.5345410234706032, prediction_score: [[0.287968]], c3: 0.1, not add noise
+test sample id: 1700
+max iteration reached with id: 1705, max score: 0.5892834205220017, prediction_score: [[0.28922594]], c3: 0.1, not add noise
+max iteration reached with id: 1715, max score: 0.5393963053423412, prediction_score: [[0.28808102]], c3: 0.1, not add noise
+max iteration reached with id: 1731, max score: 0.5500521375651813, prediction_score: [[0.28832486]], c3: 0.1, not add noise
+max iteration reached with id: 1738, max score: 0.5435736367123603, prediction_score: [[0.2881782]], c3: 0.1, not add noise
+max iteration reached with id: 1785, max score: 0.582389960623479, prediction_score: [[0.28906983]], c3: 0.1, not add noise
+test sample id: 1800
+test sample id: 1900
+max iteration reached with id: 1916, max score: 0.5063862549852458, prediction_score: [[0.28719693]], c3: 0.1, not add noise
+failed sample for label not same for id: 1921,c3:0.1 not add noise
+max iteration reached with id: 1930, max score: 0.5428188320684224, prediction_score: [[0.28816068]], c3: 0.1, not add noise
+max iteration reached with id: 1992, max score: 0.5795740991066438, prediction_score: [[0.28900647]], c3: 0.1, not add noise
+test sample id: 2000
+failed sample for label not same for id: 2003,c3:0.1 not add noise
+max iteration reached with id: 2024, max score: 0.5682975531961437, prediction_score: [[0.2887517]], c3: 0.1, not add noise
+test sample id: 2100
+max iteration reached with id: 2106, max score: 0.5399705230153289, prediction_score: [[0.2880944]], c3: 0.1, not add noise
+test sample id: 2200
+max iteration reached with id: 2245, max score: 0.5682975531961437, prediction_score: [[0.2887517]], c3: 0.1, not add noise
+max iteration reached with id: 2272, max score: 0.542900365606241, prediction_score: [[0.2881626]], c3: 0.1, not add noise
+test sample id: 2300
+failed sample for label not same for id: 2336,c3:0.1 not add noise
+test sample id: 2400
+max iteration reached with id: 2431, max score: 0.5506776135098439, prediction_score: [[0.28833896]], c3: 0.1, not add noise
+max iteration reached with id: 2444, max score: 0.5917942651274807, prediction_score: [[0.2892828]], c3: 0.1, not add noise
+max iteration reached with id: 2478, max score: 0.563775881293709, prediction_score: [[0.2886429]], c3: 0.1, not add noise
+test sample id: 2500
+failed sample for label not same for id: 2506,c3:0.1 not add noise
+max iteration reached with id: 2585, max score: 0.5506776135098439, prediction_score: [[0.28833896]], c3: 0.1, not add noise
+test sample id: 2600
+failed sample for label not same for id: 2609,c3:0.1 not add noise
+max iteration reached with id: 2681, max score: 0.5430057195741953, prediction_score: [[0.28816503]], c3: 0.1, not add noise
+max iteration reached with id: 2691, max score: 0.6216573339273828, prediction_score: [[0.2900822]], c3: 0.1, not add noise
+test sample id: 2700
+max iteration reached with id: 2732, max score: 0.5525272463867461, prediction_score: [[0.28838086]], c3: 0.1, not add noise
+failed sample for label not same for id: 2753,c3:0.1 not add noise
+max iteration reached with id: 2757, max score: 0.548236520004712, prediction_score: [[0.28828397]], c3: 0.1, not add noise
+max iteration reached with id: 2788, max score: 0.541308512289322, prediction_score: [[0.28812551]], c3: 0.1, not add noise
+test sample id: 2800
+max iteration reached with id: 2814, max score: 0.583797042851686, prediction_score: [[0.2891017]], c3: 0.1, not add noise
+max iteration reached with id: 2834, max score: 0.5063862549852458, prediction_score: [[0.28719693]], c3: 0.1, not add noise
+max iteration reached with id: 2889, max score: 0.6336786860032394, prediction_score: [[0.2904945]], c3: 0.1, not add noise
+test sample id: 2900
+max iteration reached with id: 2910, max score: 0.571752073374944, prediction_score: [[0.2888309]], c3: 0.1, not add noise
+max iteration reached with id: 2920, max score: 0.5438497576213721, prediction_score: [[0.2881847]], c3: 0.1, not add noise
+max iteration reached with id: 2991, max score: 0.5399705230153289, prediction_score: [[0.2880944]], c3: 0.1, not add noise
+max iteration reached with id: 2995, max score: 0.5435736367123603, prediction_score: [[0.2881782]], c3: 0.1, not add noise
+test sample id: 3000
+max iteration reached with id: 3006, max score: 0.5130001337069984, prediction_score: [[0.28741845]], c3: 0.1, not add noise
+max iteration reached with id: 3069, max score: 0.5874600166652644, prediction_score: [[0.28918466]], c3: 0.1, not add noise
+test sample id: 3100
+max iteration reached with id: 3105, max score: 0.5438497576213721, prediction_score: [[0.2881847]], c3: 0.1, not add noise
+max iteration reached with id: 3146, max score: 0.5968960752049414, prediction_score: [[0.28939852]], c3: 0.1, not add noise
+test sample id: 3200
+max iteration reached with id: 3281, max score: 0.5580514643889389, prediction_score: [[0.28850824]], c3: 0.1, not add noise
+max iteration reached with id: 3287, max score: 0.5911199587372574, prediction_score: [[0.2892675]], c3: 0.1, not add noise
+test sample id: 3300
+max iteration reached with id: 3311, max score: 0.5461640131211722, prediction_score: [[0.2882373]], c3: 0.1, not add noise
+max iteration reached with id: 3342, max score: 0.5962663168134209, prediction_score: [[0.28938425]], c3: 0.1, not add noise
+max iteration reached with id: 3349, max score: 0.565767396681947, prediction_score: [[0.28868973]], c3: 0.1, not add noise
+test sample id: 3400
+max iteration reached with id: 3429, max score: 0.5676338478865148, prediction_score: [[0.28873518]], c3: 0.1, not add noise
+max iteration reached with id: 3441, max score: 0.595562161936573, prediction_score: [[0.2893682]], c3: 0.1, not add noise
+max iteration reached with id: 3454, max score: 0.6277926508498087, prediction_score: [[0.29027748]], c3: 0.1, not add noise
+test sample id: 3500
+max iteration reached with id: 3543, max score: 0.548236520004712, prediction_score: [[0.28828397]], c3: 0.1, not add noise
+max iteration reached with id: 3570, max score: 0.5700929748095134, prediction_score: [[0.2887937]], c3: 0.1, not add noise
+test sample id: 3600
+max iteration reached with id: 3694, max score: 0.541308512289322, prediction_score: [[0.28812551]], c3: 0.1, not add noise
+test sample id: 3700
+max iteration reached with id: 3704, max score: 0.5063862549852458, prediction_score: [[0.28719693]], c3: 0.1, not add noise
+max iteration reached with id: 3707, max score: 0.5460193538080547, prediction_score: [[0.28823406]], c3: 0.1, not add noise
+max iteration reached with id: 3759, max score: 0.5580514643889389, prediction_score: [[0.28850824]], c3: 0.1, not add noise
+max iteration reached with id: 3778, max score: 0.5762611042051556, prediction_score: [[0.28893206]], c3: 0.1, not add noise
+test sample id: 3800
+max iteration reached with id: 3831, max score: 0.5996975739945757, prediction_score: [[0.28946224]], c3: 0.1, not add noise
+max iteration reached with id: 3836, max score: 0.5632521199943087, prediction_score: [[0.28863055]], c3: 0.1, not add noise
+max iteration reached with id: 3837, max score: 0.5874600166652644, prediction_score: [[0.28918466]], c3: 0.1, not add noise
+max iteration reached with id: 3858, max score: 0.5778753240712872, prediction_score: [[0.28896832]], c3: 0.1, not add noise
+test sample id: 3900
+max iteration reached with id: 3927, max score: 0.5676338478865148, prediction_score: [[0.28873518]], c3: 0.1, not add noise
+max iteration reached with id: 3934, max score: 0.5525272463867461, prediction_score: [[0.28838086]], c3: 0.1, not add noise
+max iteration reached with id: 3944, max score: 0.5397939942572396, prediction_score: [[0.2880903]], c3: 0.1, not add noise
+max iteration reached with id: 3973, max score: 0.5700929748095134, prediction_score: [[0.2887937]], c3: 0.1, not add noise
+test sample id: 4000
+max iteration reached with id: 4045, max score: 0.5397939942572396, prediction_score: [[0.2880903]], c3: 0.1, not add noise
+test sample id: 4100
+failed sample for label not same for id: 4109,c3:0.1 not add noise
+max iteration reached with id: 4114, max score: 0.5579987889033399, prediction_score: [[0.28850698]], c3: 0.1, not add noise
+test sample id: 4200
+test sample id: 4300
+max iteration reached with id: 4304, max score: 0.5439792478951261, prediction_score: [[0.2881877]], c3: 0.1, not add noise
+max iteration reached with id: 4326, max score: 0.5022467614735143, prediction_score: [[0.28700733]], c3: 0.1, not add noise
+test sample id: 4400
+max iteration reached with id: 4412, max score: 0.6336786860032394, prediction_score: [[0.2904945]], c3: 0.1, not add noise
+max iteration reached with id: 4467, max score: 0.5656204778363054, prediction_score: [[0.28868634]], c3: 0.1, not add noise
+max iteration reached with id: 4473, max score: 0.5345410234706032, prediction_score: [[0.287968]], c3: 0.1, not add noise
+max iteration reached with id: 4476, max score: 0.5700929748095134, prediction_score: [[0.2887937]], c3: 0.1, not add noise
+failed sample for label not same for id: 4482,c3:0.1 not add noise
+test sample id: 4500
+max iteration reached with id: 4526, max score: 0.5746250914337425, prediction_score: [[0.2888954]], c3: 0.1, not add noise
